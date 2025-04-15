@@ -1,9 +1,66 @@
-#mobile_wrap {background-color:#92FAFE;}
-#mobile_wrap .photo {}
+#mobile_wrap {
+    background-color:#92FAFE;/* 모바일 랩한테 주는것 */
+    width:440px; height:956px;/* 모바일 랩한테 주는것 */
+    text-align:center;/* 자식 자손의 가운데 정렬 */
+    font-family:'Pretendard',sans-serif;/* 자식 자손의 글꼴 통일 */
+}
+#mobile_wrap .photo {
+    margin-top:113px;
+    margin-bottom:40px;
+    display:inline-block /* 인라인 특성때문에 inline-block을 붙여줘야 정상적으로 위의 값이 반영됨 */
+}
 #mobile_wrap .photo img {}
-#mobile_wrap h1 {}
-#mobile_wrap h1 span {}
-#mobile_wrap h2 {}
-#mobile_wrap .git {}
-#mobile_wrap .skill {}
-#mobile_wrap .skill li {}
+#mobile_wrap h1 {
+    color:#89348D;
+    font-size:1.5rem;
+    font-weight:500;
+    margin-bottom:76px;
+    line-height:2;
+    letter-spacing:0.02rem;
+}
+#mobile_wrap h1 span {
+    color:#89348D;
+    font-size:2.25rem;
+    font-weight:600
+}
+#mobile_wrap h2 {
+    color:#89348D;
+    font-size:1em;
+    font-weight:600;
+    line-height:1.5;
+    letter-spacing:0.02rem;
+    width:246px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}
+#mobile_wrap .git {
+    color:#89348D;
+    font-size:1rem;
+    font-weight:600;
+    line-height:1.5;
+    letter-spacing:0.02rem;
+    width:246px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    display:inline-block;
+}
+#mobile_wrap .skill {
+    font-size:1rem;
+    text-align:left;
+    letter-spacing:0.02rem;
+    width:246px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}
+#mobile_wrap .skill li {
+    color:#89348D;
+    line-height:1.5;
+    font-weight:600;
+    width:246px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}

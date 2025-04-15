@@ -1,0 +1,68 @@
+h1 {
+    background-color:yellow;
+    font-family:'궁서체','바탕체',serif;
+    font-weight:900;
+    /* 글꼴 명이 한글 또는 공백이 포함되어 있을경우 따옴표로 묶어서 작성하여야한다. */
+}
+h2 {
+    background-color:pink;
+    font-family:'나눔고딕', '맑은 고딕', '돋움', sans-serif;
+    font-weight:800;
+}
+h3 {
+    background-color:aqua;
+    font-family:'Noto Sans KR', sans-serif;
+    font-weight:600;
+}
+h4 {
+    background-color:rgba(135,0,45,0.6);
+    font-family:'Nanum myeongjo', serif;
+    font-weight:500;
+}
+h5 {
+    background-color:#f944f3;
+    font-family:'Nanum Gothic Coding', 'Gothic A1', sans-serif;
+    font-weight:500;
+}
+p {
+    background-color:cyan;
+    font-family:'Pretendard', sans-serif;
+    font-weight:400;
+    /* 글꼴 굵기 설정 값 400이 기본값.(단위는 100단위로 설정) */
+}
+.size_wrap {
+    background-color:rgba(0,0,0,0.1);
+    font-size:1.25rem;
+}
+.size_wrap dt {font-size:1em}
+.size_wrap dd {font-size:1rem;}
+.size_wrap .content {
+    font-size:0.875rem;
+    line-height:1.7;
+    font-family:'Pretendard', sans-serif;
+    font-weight:600;
+}
+.details {
+    background-color:#fff;
+    color:#555;
+    font-size:1.25rem;
+    line-height:1.5;
+    font-family:'Noto Sans KR', sans-serif;
+    font-weight:500;
+    letter-spacing:-0.025em;
+    /* -0.02=피그마의 -2%와 거의 같음 */
+}
+.details code {
+    background-color:yellow;
+    color:blue;
+}
+.box {
+    background-color:#000;
+    color:#fff;
+    width:200px; height:200px;
+    text-align:center;
+    /* text-align속성은 속성값을 입력한 대상기준으로 그 자식 또는 자손이 인라인 요소 일 경우에만 적용된다.(단순 글자도 인라인으로 인식함.) */
+    line-height:200px;
+    /* line-height를 이용한 수직정렬 주의사항 */
+    /* 요소의 height값이 px로 작성된 경우 그값을 그대로 line-height에 px값으로 작성하여 수직 가운데에 정렬함. 단, 글자가 2줄이상일경우 적용해선 안되며, 1줄일때만 적용해야한다. */
+}
