@@ -39,3 +39,29 @@
 9. `git push origin main`으로 깃허브에 업로드 진행
 10. 깃허브에 접속하여 정상적으로 업로드 진행 되었는지 
 11. 다시 원래 환경으로 돌아와서 작업 시작시, `git pull origin main`으로 기존에 작업 받은 내용을 내려받아 작업 진행
+----
+## CSS Style Sheet
+* 외부스타일시트 파일 저장 **styles** 폴더에 `파일명.css` 저장한다.
+* 위 파일 생성후 CSS연결을 원하는 HTML파일 head위치에 `<link>`태그로 연결한다.
+* HTML작성 후 HTML의 모든 디자인형태를 초기화하는 `reset.css`파일 만든후 반드시 연결
+* 웹글꼴(Noto Sans KR, Pretendard 등) 연결 시 HTML파일에 `<link>`태그로 연결해야함(연결해야 다운로드가 되지 않은 글꼴이어도 인터넷 연결만 되면 해당글꼴로 볼수 있기 때문)
+### head태그 내에 들어가는 link태그 작성 순서 ★중요★
+1. 웹글꼴 포함 기타 플러그인 연결 주소
+2. reset.css
+3. 해당 HTML별 디자인.css
+### 디자인 CSS 작성 시 작성 순서 및 주의사항
+* **부모->자식** 순서로 가장 바깥쪽 부모부터 먼저 선택자를 만들고 디자인한다.
+* 레이아웃 관련 요소에 `width, height` 속성 작성 시 영역 확인을 위한 `background-color`를 꼭 함께 작성해서 정확히 구분한다. 이때 색상은 쉬운 영역 구분을 위한 `aqua, lime, yellow, pink`등의 밝은 색상 위주로 사용한다. 영역 확인과 디자인 작업을 모두 마친 후 위 색상은 제거하여 마무리 해야한다.
+* 실제 디자인에 들어가는 색상은 **rgba 또는 헥사코드로** 입력하고 테스트용으로 입력하는 임시 색상은 영문명으로 입력해야한다.
+### 자주 이용하는 CSS 속성 값 기본값
+* `letter-spacing` 자간을 뜻함. 기본값 0
+* `line-height` 행간을 뜻함. 기본값 1(100%)
+* `font-size` 글자의 크기를 정함 기본16px(1em) 예) font-size:1em;
+* `color` 색깔을 정함 (rgb(0,0,0), #000, rgba(0,0,0,0.7))
+* `background-color` 배경의 색깔을 정함 (rgb(0,0,0), #000, rgba(0,0,0,0.7))
+* `width` 가로 크기를 정함. 예: width:200px;
+* `height` 세로 크기를 정함. 예: height:200px;
+* `margin` 바깥쪽 여백을 줌 예: margin:20px; (바깥에서 특정 부분만 여백을 주고 싶을땐 예를들어 윗쪽만 여백을 주고 싶으면 margin-top:20px; 이런식으로 주면 됨)
+* `border-radius` 모서리를 둥글게 함 예: border-radius:50px;
+* `font-weight` 글자의 두께를 정함 예; font-weight:400; (400이 기본값. 설정은 100단위로)
+* `font-family` 폰트를 정함 예; font-family:'Noto Sans KR', 'Pretendard', sans-serif; (기초 폰트에 문제가 생길것을 대비하여 예비 폰트를 써놓으며, 공백, 한글이 있을때 ''나 ""로 묶는다. 다운로드가 필요한 웹글꼴의 경우 link태그로 연결후에 사용하여야 됨)
