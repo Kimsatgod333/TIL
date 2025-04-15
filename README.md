@@ -64,4 +64,4 @@
 * `margin` 바깥쪽 여백을 줌 예: margin:20px; (바깥에서 특정 부분만 여백을 주고 싶을땐 예를들어 윗쪽만 여백을 주고 싶으면 margin-top:20px; 이런식으로 주면 됨)
 * `border-radius` 모서리를 둥글게 함 예: border-radius:50px;
 * `font-weight` 글자의 두께를 정함 예; font-weight:400; (400이 기본값. 설정은 100단위로)
-* `font-family` 폰트를 정함 예; font-family:'Noto Sans KR', 'Pretendard', sans-serif; (기초 폰트에 문제가 생길것을 대비하여 예비 폰트를 써놓으며, 공백, 한글이 있을때 ''나 ""로 묶는다. 다운로드가 필요한 웹글꼴의 경우 link태그로 연결후에 사용하여야 됨)
+* `font-family` 폰트를 정함 예; font-family:'Noto Sans KR', 'Pretendard', sans-serif; (왼쪽부터 대표폰트, 예비폰트1, 예비폰트2. 대표 폰트에 문제가 생길것을 대비하여 예비 폰트를 써놓으며, 공백, 한글이 있을때 ''나 ""로 묶는다. 다운로드가 필요한 웹글꼴의 경우 link태그로 연결후에 사용하여야 됨)
