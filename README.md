@@ -56,7 +56,7 @@
 ### 자주 이용하는 CSS 속성 값 기본값
 * `letter-spacing` 자간을 뜻함. 기본값 0
 * `line-height` 행간을 뜻함. 기본값 1(100%)
-* `font-size` 글자의 크기를 정함 기본16px(1em) 예) font-size:1em;
+* `font-size` 글자의 크기를 정함 기본16px(1em) 예: font-size:1em;
 * `color` 색깔을 정함 (rgb(0,0,0), #000, rgba(0,0,0,0.7))
 * `background-color` 배경의 색깔을 정함 (rgb(0,0,0), #000, rgba(0,0,0,0.7))
 * `width` 가로 크기를 정함. 예: width:200px;
