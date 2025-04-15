@@ -1,12 +1,12 @@
-#weater {}
-#weater h1 {}
-#weater .area {}
-#weater .temperature {}
-#weater .temperature+p {}
-#weater .sub_title {}
-#weater .humidity {}
-#weater .dust {}
-#weater .result {}
+#weather {}
+#weather h1 {}
+#weather p {}
+#weather .area {}
+#weather .temperature {}
+#weather .sub_title {}
+#weather .humidity {}
+#weather .dust {}
+#weather .result {}
 #news {}
 #news > a {}
 #news .box {}
@@ -14,3 +14,4 @@
 #news .box a h2 {}
 #news .box a p {}
 #news p {}
+#news p span {}
