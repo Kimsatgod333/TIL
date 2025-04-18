@@ -6,15 +6,15 @@
     text-align:center;
 }
 #wrap h1 {
-    margin-top:230px;
-    margin-bottom:160px;
+    padding: 230px 0 160px 0;
 }
 #wrap h1 img {}
 #wrap .account_wrap {
     width:300px;
     /* 블록의 너비값을 부모보다 작게 설정했을때, 블록을 가운데 정렬하고 싶을때 */
-    margin-left:auto;
-    margin-right:auto;
+    margin:0 auto;
+    /*     margin-left:auto;
+    margin-right:auto; */
     text-align:left;/* account_wrap의 인라인 자식, 자손의 왼쪽정렬 */
 }
 #wrap .account_wrap a {
@@ -30,8 +30,9 @@
     border-radius:20px; 
 }
 #wrap .account_wrap .sign_up_btn {
-    margin-top:15px;
-    margin-bottom:10px;
+    margin:15px 0 10px 0;
+    /*     margin-top:15px;
+    margin-bottom:10px; */
     height:40px;
     line-height:40px;
     font-size:0.875rem;

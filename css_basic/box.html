@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 CSS 연습</title>
+    <link href="./styles/reset.css" rel="stylesheet">
+    <style>
+        .box1 {
+            background-color: aqua;
+            text-align:center;
+        }
+        .box1 > * {
+            border: 2px solid #000;
+            font-size:3rem;
+            margin-left:-6px;
+        }
+        .box1 h1 {
+            display:inline-block;
+        }
+        .box1 a {
+            display:inline-block;
+            /* display:none; */
+            width:100px; height:100px;
+            visibility:hidden;
+            /* 동적 애니메이션 처리 시 요소의 자리는 유지하고 숨겨야 하는 경우 주로 사용함 */
+        }
+        .box1 + a {
+            width:50%;
+            height:100vh;
+            background-color:lime;
+            display:block;
+        }
+        ul {
+            background-color:yellow;
+            padding-top:40px;
+            padding-right:40px;
+            padding-bottom:40px;
+            padding-left:40px;
+        }
+        ul li {
+            background-color:pink;
+            margin-bottom:30px;
+            padding-top:15px;
+            padding-right:15px;
+            padding-bottom:15px;
+            padding-left:15px;
+        }
+        .box2 {
+            background-color:aqua;
+            text-align:right;
+            padding:50px 100px 200px 0;
+            margin:150px 0 0 0;
+        }
+        .box2 a {
+            border:3px dotted #f00;
+            font-size:5rem;
+            display:inline-block;
+            /* 형제와 형제 사이에 여백 설정시 margin */
+            /* 부모와 자식 사이에 여백 설정시 padding */
+            /* padding: 50px; *//* 상하좌우 모두 동일한 값 */
+            /* padding:1px 2px 3px 4px; 위, 우,아래,좌의 값이 각각다를때 */
+            /* padding:5px 10px;상하(왼쪽)와 좌우(오른쪽)의 값이 각각 동일 할경우 */
+            /*padding:5px 10px 0; 상/좌우/하 값으로 3개를 나눔 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1>h1</h1>
+        <a href="#">a</a>
+    </div>
+    <a href="#">금요일 웹툰 보기</a>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+    </ul>
+    <div class="box2">
+        <a href="#">LINK</a>
+    </div>
+</body>
+</html>
