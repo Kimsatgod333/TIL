@@ -1,0 +1,30 @@
+.bg {
+    width:1000px; height:1000px;
+    background-repeat:no-repeat;
+}
+.bg1{
+    background:yellow url(https://i.pinimg.com/236x/17/91/8a/17918ab69fd6155b2ae5d491c4ca006c.jpg)no-repeat center center/ cover;
+/*     background-color:yellow;
+    background-image:url(https://i.pinimg.com/236x/17/91/8a/17918ab69fd6155b2ae5d491c4ca006c.jpg);
+    background-position:right center;
+    background-size:cover; */
+/*     background-repeat:repeat-y; */
+}
+.bg2{
+    background:cyan url(../images/test2.jpg) no-repeat scroll 40% 45% / cover;
+/*     background-color:aqua;
+    background-image:url(../images/test3.jpg);
+    background-position:40% 45%; */
+/*     background-size:cover; */
+/*     background-size:200% auto; */
+/*     background-repeat:repeat-x; */
+} 
+.bg3{
+    height:3000px;
+    background:violet url(https://i.pinimg.com/736x/47/51/ae/4751aef970a484d49cbac1e509eab61c.jpg) no-repeat fixed 0% 50% / cover;
+/*     background-color:cyan;
+    background-image:url(https://i.pinimg.com/736x/47/51/ae/4751aef970a484d49cbac1e509eab61c.jpg);
+    background-position:-30% 50%;
+    background-size:70% auto;
+    background-attachment:fixed; */
+}
