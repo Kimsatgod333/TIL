@@ -33,27 +33,30 @@ main #login_frm .member_info {
     overflow:hidden;
 }
 main #login_frm .member_info dt {
-    width:200px; background-color:lime;
+    width:200px;
     float:left;
     clear:both;
 }
-main #login_frm .member_info dt em {}
+main #login_frm .member_info dt em {
+    color:#fe1313;
+}
 main #login_frm .member_info dd {
     float:left;
+    margin-bottom:10px;
+
 }
 /* main #login_frm .member_info dd:nth-of-type(odd) {
     background-color:yellow;
 } */
 main #login_frm .member_info dd:nth-of-type(2n+1) {
     width:650px;
-    background-color:yellow;
 }
 /* main #login_frm .member_info dd:nth-of-type(even) {
     background-color:skyblue;
 } */
 main #login_frm .member_info dd:nth-of-type(2n) {
     width:150px;
-    background-color:skyblue;
+    text-align:right;
 }
 /* =======================id,pw,name,email,phone 속성 */
 main #login_frm .member_info dd input[name^=user] {
@@ -64,23 +67,99 @@ main #login_frm .member_info dd input[name^=user] {
 }
 main #login_frm .member_info dd input[name$=id] {}
 main #login_frm .member_info dd input {}
+main #login_frm .member_info dd:nth-of-type(2n) .btn:hover {
+    filter:brightness(110%);
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
 main #login_frm .member_info dd:nth-of-type(2n) .btn {
-    background-color:red;
+    background-color:#9d00b7;
+    color:#fff;
+    font-weight:200;
+    width:90%;
+    height:45px;
+    border-radius:5px;
 }
 /* 휴대폰,주소, 성별, 생년월일 선택자 */
 main #login_frm .member_info dd button {}
-main #login_frm .member_info dd select[name^=news] {}
-main #login_frm .member_info dd select[name^=news] option {}
-main #login_frm .member_info dd input[name*=phone] {}
+main #login_frm .member_info dd select[name^=news] {
+    width:60px; height:50px;
+    border:1px solid #ccc; border-radius:4px;
+    padding:4px;
+    font-size:0.875rem;
+    float:left;
+    margin-right:5px;
+    background:#fff url(../images/ico_down_16x10.png) no-repeat 95% 55% / 10px;
+}
+main #login_frm .member_info dd select[name^=news] option {
+}
+main #login_frm .member_info dd input[name*=phone] {
+    float:left;
+    width:calc(90% - 65px);/* width:520px; */
+}
 /* 인증번호 버튼 개별 선택자 */
 main #login_frm .member_info dd #authentication_btn {
-    background-color:coral;
+    background-color:#ccc;
 }
-main #login_frm .member_info dd #address_search_btn {}
-main #login_frm .member_info dd #address_search_btn + span {}
-main #login_frm .member_info dd input[name=gender] {}
-main #login_frm .member_info dd input[name=gender] + label {}
-main #login_frm .member_info dd input[name^=birthday] {}
-/* =========가입버튼 */
-main #login_frm .btn {}
-main #login_frm .btn button {}
+main #login_frm .member_info dd #address_search_btn {
+    border:1px solid #9d00b7;
+    background-color:#fff;
+    width:90%;
+    padding:12px 0;
+    border-radius:4px;
+    font-weight:600;
+}
+main #login_frm .member_info dd #address_search_btn + span {
+    display:block; color:#aaa;
+}
+main #login_frm .member_info .gender_g {text-align:center;}
+main #login_frm .member_info dd input[name=gender] {
+    display:none;
+}
+main #login_frm .member_info dd input[name=gender] + label {
+    /* 비활성화 디자인 */
+    background:url(../images/check_state.svg) no-repeat left 52% / 16px auto;
+    padding-left:20px;
+    width:90%;
+    margin-right:35px;
+}
+main #login_frm .member_info dd input[name=gender] + label:last-of-type {
+    margin-right:0;
+}
+main #login_frm .member_info dd input[name=gender]:checked + label {
+    /* 활성화 디자인 */
+    background-image:url(../images/check_state_on.png);
+}
+main #login_frm .member_info dd:nth-last-of-type(2) {
+    text-align:center;
+    border:1px solid #9d00b7;
+    border-radius:4px;
+    background-color:#fff;
+    width:calc(650px * 0.9); /* width:585px */;
+    padding:12px 0;
+}
+main #login_frm .member_info dd input[name^=birthday] {
+    width:70px;
+    text-align:center;
+    text-transform:uppercase;
+}
+main #login_frm .member_info dd:nth-last-of-type(2) span::after {
+    content:'/';
+    display:inline-block;
+    font-size:0.875rem; color:#aaa; margin:0 3px;
+}
+main #login_frm .member_info dd:nth-last-of-type(2) span:last-child::after {
+    display:none;
+} 
+/*=========가입버튼 */
+main #login_frm > .btn {}
+main #login_frm .btn button {
+    background-color:#9d00b7; color:#fff;
+    display:block;
+    margin:40px auto 0;
+    width:calc(650px * 0.5);
+    border-radius:10px;
+    padding:15px 0;
+}
+main #login_frm .btn #join:hover {
+    filter:brightness(1.1);
+}
