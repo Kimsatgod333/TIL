@@ -1,0 +1,51 @@
+html, body{height:300vh;}
+h1 {}
+/* 공통 선택자 */
+.pst {background-color:#eee; padding:20px; margin:20px;}
+.pst li {width:100px; height:100px;}
+.pst li:nth-child(1) {background-color:yellow;}
+.pst li:nth-child(2) {background-color: aqua;}
+.pst li:nth-child(3) {background-color:pink;}
+.pst li:nth-child(4) {background-color:blue;}
+/* 개별 선택자 */
+.pst1 {position:relative;}
+.pst1 li {
+    /* position:relative; */
+}
+.pst1 li:nth-child() {}
+.pst1 li:nth-child(2) {
+    position:relative;/* 필수속성(현재위치기준) */
+    left:20px; top:20px;/* 선택속성(이동하고 싶은 방향에 따라 지정) */
+}   
+.pst1 li:nth-child(3) {
+    position:absolute;
+    right:0; bottom:0;
+}
+.pst1 li:nth-child(4) {position:absolute; right:0; top:0;}
+.pst li span {
+    display:inline-block;
+    border:5px solid red; padding:10px;
+    position:absolute;
+    right:0; bottom:0;
+}
+#all {
+    width:500px; height:500px;
+    border:5px solid blue;
+    position:relative;
+}
+#all #box {
+    width:300px; height:300px;
+    border:5px solid red;
+    position:absolute;
+    right:3%; bottom:0;
+}
+#all #box .contents {
+    background-color:yellow;
+    width:150px; height:150px;
+    position:absolute;
+    left:0; bottom:0;
+}
+.top {
+    position:fixed; /* body기준 위치설정 */
+    right:120px; bottom:50%;
+}
