@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation | keyframes | CSS</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        main {
+            background:#eee; padding:50px; height:100vh;
+        }
+        main .target {} /* 공통 */
+        main .ball {
+            background:radial-gradient(at left top, #fff, #222);
+            background-size:160%;
+            width:50px; height:50px; border-radius:50%;
+            animation:right500 1s ease 3 alternate both;
+            /* background-position:100%; */
+        }
+        main .ball2 {
+            background: radial-gradient(at right top,rgba(255, 209, 209, 1) 0%, rgba(255, 140, 140, 1) 31%, rgba(223, 97, 97, 1) 72%, rgba(199, 70, 66, 1) 100%);
+            background-size:200%;
+            width:150px; height:150px; border-radius:50%;
+            animation:bottom400 3s linear 7 alternate both;
+        }
+        main .ball3 {
+            animation:zigzag 5s ease 8 alternate both;
+        }
+        main .ball3 img {width:80px; animation:rolling_ball 0.5s 80 alternate}
+        section {}
+        section .ad {height:50vh; padding:50px;}
+        section .ad span {
+            display:inline-block;
+            text-transform:uppercase;
+            font-size:3rem; font-weight:800;
+            animation:ad_txt 0.5s both;
+        }
+        section .ad2 {
+            height:50vh; padding:50px;
+        }
+        section .ad2 em {
+            display:inline-block;
+            font-size:2.5rem; font-weight:700;
+            animation:ad_txt 0.5s both;
+        }
+        section .ad2 em:nth-child(1) {animation-delay:0s;}
+        section .ad2 em:nth-child(2) {animation-delay:0.2s;}
+        section .ad2 em:nth-child(3) {animation-delay:1.2s;}
+        section .ad2 em:nth-child(4) {animation-delay:1.4s;}
+        section .ad span:nth-child(1) {animation-delay:0s;}
+        section .ad span:nth-child(2) {animation-delay:0.4s;}
+        section .ad span:nth-child(3) {animation-delay:0.8s;}
+        section .ad span:nth-child(4) {animation-delay:1.2s;}
+        /* 애니메이션 적용 순서 1. keyframes(장면)생성, 2. 애니메이션호출 */
+        @keyframes right500 {
+            from {transform:translateX(0) rotate(0);}
+            to {transform:translateX(500px) rotate(360deg);}
+        }
+        @keyframes bottom400 {
+            from {transform:translateY(0) rotate(0);}
+            to {transform:translateY(400px) rotate(360deg);}
+        }
+        @keyframes zigzag {
+            0% {transform:translate(0,0) rotate(0);}
+            10% {transform:translate(500px,0) rotate(0);}
+            20% {transform:translate(0,40px) rotate(0);}
+            30% {transform:translate(500px,40px) rotate(0);}
+            40% {transform:translate(0,80px) rotate(0);}
+            50% {transform:translate(500px,80px) rotate(0);}
+            60% {transform:translate(0,120px) rotate(0);}
+            70% {transform:translate(500px,120px) rotate(0);}
+            80% {transform:translate(0,160px) rotate(0);}
+            90% {transform:translate(500px,160px) rotate(0);}
+            100% {transform:translate(0,200px) rotate(0);}
+        }
+        @keyframes rolling_ball {
+            from {transform:rotate(0);}
+            to {transform:rotate(360deg);}
+        }
+        @keyframes ad_txt {
+            from {transform:translateY(50px); opacity:0;}
+            to {transform:translateY(0); opacity:1;}
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="target ball"></div>
+        <div class="target ball2"></div>
+        <div class="target ball3"><img src="./images/soccer-ball.png" alt=""></div>
+    </main>
+    <section>
+        <div class="ad">
+            <span>h</span>
+            <span>t</span>
+            <span>m</span>
+            <span>l</span>
+        </div>
+        <div class="ad2">
+            <em>1</em>
+            <em>박</em>
+            <em>2</em>
+            <em>일</em>
+        </div>
+    </section>
+</body>
+</html>
