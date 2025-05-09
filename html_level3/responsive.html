@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹 | CSS</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        main {
+            /* width:1920px; */ /* 1920 가로크기를 고정(반응형웹 제작할때는 고정 크기 주의) */
+            max-width:1920px; /* 최대제한너비가 1920px (사용자가 보는 디바이스 크기가 1920px 이하일 경우 상대적으로 자동크기 조절) */
+            min-width:901px; /* 최소 제한너비 901px (901~1920px 사이값만 상대처리를 위한 최소 제한값 설정) */
+            border:5px solid #000; height:100vh;
+        }
+        main .mv_list {
+            display:flex;
+            flex-flow:row wrap;
+            /* flex에서 자식 사이 여백을 일정하게 적용시키는 flex 부모속성이 있음 */
+            gap:10px; /* 부모한테 사용하는 속성, 자식 사이의 여백을 일정하게 적용함. */
+        }
+        main .mv_list li {
+            /* width:calc((100% - 10px) / 3); */ /* 반응형에서 요소 크기(특히 width) 조절 시 % 또는 calc() 계산법으로 상대처리를 반드시 해야한다. 크기가 고정되는 광고 및 특정 영역만 필요시 최소한으로 px 고정 너비를 적용한다. */
+            width:calc((100% - 20px) / 3); /* 또는 width:calc((100% - (10px * 2)) / 3); 로 계산 할 수 있음. 20px이 차감된 이유는 desktop 환경에서 3줄로 되도록 설정했기 때문에 gap으로 준 10px이 두번 들어가기 때문, gap의 값과 줄의 수가 달라지면 계산도 달라짐. */
+            height:250px;/* 임시 높이값 */
+            border:1px solid #ddd;
+        }
+        main .mv_list li:nth-child(odd) {background-color:aqua;}
+        main .mv_list li:nth-child(even) {background-color:lime;}
+        /* 반응형규칙(사용자가 이용하는 디바이스가 달라졌을때 인식하는 값 media queries) */
+        @media screen and (max-width:900px) {
+            /* 기존 CSS 중 현재 규칙에 맞춰 달라지는 값만 수정 */
+            main {
+                /* max-width:900px; 첫번째 규칙 max-width:1920px에 의해 1920px보다 작은 값은 min 규칙으로 막지 않는한 모두 상대처리하기 때문에 또 max-width 값을 입력하지 않아도됨. */
+                min-width:601px;
+                border-color:red;/* 구분용 선 색깔 변경 */
+            }
+            main .mv_list li {
+                width:calc((100% - 10px) / 2); /* 2줄로 변하기 때문에 gap에 준 10px의 값이 한번만 들어가므로 desktop과 다르게 10px만 차감 */
+            }
+        }/* media 900 end */
+        @media screen and (max-width:600px) {
+            main {
+                min-width:320px;
+                border-color:yellow;
+            }
+            main .mv_list li {
+                width:100%;/* 한줄이기 때문에 좌우로는 gap이 발생하지 않음. 따라서 mobile 환경에서는 -10px을 차감하지 않음. */
+            }
+        } /* media 600 end */
+    </style>
+</head>
+<body>
+    <!-- 유튜브 영상 미리보기 반응형 구조 만들기 -->
+    <!-- Desktop : 3열 (901~1920) -->
+    <!-- tablet : 2열 (601~900)-->
+    <!-- mobile : 1열 (320~600)-->
+    <main>
+        <ul class="mv_list">
+            <li>미리보기1</li>
+            <li>미리보기2</li>
+            <li>미리보기3</li>
+            <li>미리보기4</li>
+            <li>미리보기5</li>
+            <li>미리보기6</li>
+            <li>미리보기7</li>
+            <li>미리보기8</li>
+        </ul>
+    </main>
+</body>
+</html>
