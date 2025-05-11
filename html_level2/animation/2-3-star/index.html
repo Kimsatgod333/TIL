@@ -38,23 +38,51 @@
         }
         .menu_contents .menu a {
             margin-right:10px; overflow:hidden; position:relative;
-            border-radius:10px; 
+            border-radius:10px;
+            transition:all 0.3s;
+        }
+        .menu_contents .menu a:hover {
+            border-radius:50%;
         }
         .menu_contents .menu a:last-child {margin-right:0}
         .menu_contents .menu a img {width:100%;}
         /* 커피정보 */
-        .menu_contents .menu .info {
-            background:rgba(0,102,51,0.8); /*#006633 == rgb(0,102,051)*/
-            color:#fff;
+        .menu_contents .menu a .info {
+            display:none;
+        }
+        .menu_contents .menu a:hover .info {
+            background-color:rgba(0,102,51,0.8); /*#006633 == rgb(0,102,051)*/
             width:100%; height:100%; display:block;
             position:absolute; left:0; top:0;
             text-align:center;
         }
-        .menu_contents .menu .info span:first-child {padding-top:40%;}
-        .menu_contents .menu .info span {
+        .menu_contents .menu a .info span:first-child {padding-top:40%;}
+        .menu_contents .menu a .info span {
             display:block; font-weight: 600;
             line-height:1.5;
+            color:#fff;
         }
+        /* 개별 태그 CSS */
+        .menu_contents .menu1 {}
+        .menu_contents .menu1 a {}
+        .menu_contents .menu1 a img {}
+        .menu_contents .menu1 a .info {}
+        .menu_contents .menu1 a .info span {}
+        .menu_contents .menu2 {
+            display:none;
+        }
+        .menu_contents .menu2 a {}
+        .menu_contents .menu2 a img {}
+        .menu_contents .menu2 a .info {}
+        .menu_contents .menu2 a .info span {}
+        .menu_contents .menu3 {
+            display:none;
+        }
+        .menu_contents .menu3 a {}
+        .menu_contents .menu3 a img {}
+        .menu_contents .menu3 a .info {}
+        .menu_contents .menu3 a .info span {}
+        .menu_contents .menu
         /* active class + animation */
         .active {font-weight:800;}
         .active::after {
