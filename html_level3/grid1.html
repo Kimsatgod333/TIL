@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid | CSS</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        .container {
+            border:5px solid #000;
+            padding:20px;
+            display:grid; /* 정렬대상 item의 부모한테 명령(flex와 동일) */
+            /* 1행 기준 item 크기 설정과 방향 속성 */
+            /* grid-template-rows:80px 100px 50px 100px; */ /* 부모에게 임의의 값을 줌으로써 자식 태그들에게 순서대로 해당 값들을 적용 시킬수 있다. */
+            /* 1열 기준 item 크기 설정과 방향 속성 */
+            /* grid-template-columns:repeat(3, 1fr);
+            grid-template-rows:100px 150px; */
+            grid-template-areas:
+                'title title'
+                'poster poster'
+                'details reservation';
+            grid-template-rows:50px 300px 30px;
+        }
+        .container .item {}
+        /* 각 영역에 grid 레이아웃을 위한 이름 선정 */
+        .container .item:nth-child(1) {grid-area:title;}
+        .container .item:nth-child(2) {grid-area:poster;}
+        .container .item:nth-child(3) {grid-area:details;}
+        .container .item:nth-child(4) {grid-area:reservation;}
+        .container .item:nth-child(odd) {background-color:cyan;}
+        .container .item:nth-child(even) {background-color:skyblue;}
+        /* 혜택 메가박스 만들기 */
+        .container2 {
+            width:920px;
+            display:grid;
+            border:5px solid #888;
+            padding:20px;
+            grid-template-areas:/* flex에 비해 적은 태그로 많은 변형을 할수 있음. */
+                'title title'
+                'ticket banner1'
+                'banner2 banner1';
+            grid-template-columns:55% 45%;
+            grid-template-rows:120px 300px 200px;
+        }
+        .container2 .item {
+            border:2px solid blue;
+        }
+        .container2 .item:nth-child(1) {
+            grid-area:title;
+        }
+        .container2 .item:nth-child(2) {
+            grid-area:ticket;
+        }
+        .container2 .item:nth-child(3) {
+            grid-area:banner1;
+        }
+        .container2 .item:nth-child(4) {
+            grid-area:banner2;
+        }
+        .container2 .item:nth-child(odd) {background-color:pink;}
+        .container2 .item:nth-child(even) {background-color:lightcyan;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="container2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>

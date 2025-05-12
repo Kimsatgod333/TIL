@@ -3,7 +3,8 @@ html,body,h1,h2,h3,h4,h5,h6,
 dl,dt,dd,ol,ul,li,blockquote,hr,div,video,address,p,
 header,footer,nav,aside,article,section,figure,figcaption,main,details,summary,
 form,fieldset,legend,input,button,select,option,textarea,
-em,strong,sub,sup,br,span,del,s,q,mark,code,img,a {
+em,strong,sub,sup,br,span,del,s,q,mark,code,img,a, 
+table,thead,tbody,tfoot,tr,td,th {
     margin:0; padding:0; box-sizing:border-box;
     line-height:1; letter-spacing:0; word-spacing:0;
     font-size:1em; font-weight:400; color:#000;
@@ -16,3 +17,5 @@ fieldset {border:0;}/* 기본 태두리 없엠 */
 legend {display:none;}/* 제목 숨김 */
 input {border:0; outline:none;} /* 태두리 및, 해당영역 클릭시 나오는 태두리 없엠 */
 button {border:0; background:0; cursor:pointer;} /* 태두리 및, 태두리 안에 채워진 색깔 제거, 커서를 갖다대면 손가락 모양으로 바뀜 */
+table,tr,td,th {border-collapse:collapse;}
+select, option {border:0; appearance:none;}
