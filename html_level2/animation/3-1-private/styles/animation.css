@@ -1,16 +1,16 @@
 @keyframes wheels {
     from {transform:rotate(0);}
-    to {transform:rotate(360deg);}
+    to {transform:rotate(-360deg);}
 }/* wheels animation end */
 @keyframes bg_front {
-    from {background-position:0;}
-    to {background-position:1522px;}
+    from {background-position-x:0;}
+    to {background-position-x:1522px;}
 }/* 앞쪽 배경 애니메이션 끝 */
 @keyframes bg_back {
-    from {background-position:0;}
-    to {background-position:1520px;}
+    from {background-position-x:0;}
+    to {background-position-x:1520px;}
 }/* 뒷쪽 배경 애니메이션 끝 */
 @keyframes clouds {
-    from {background-position:0;}
-    to {background-position:1219px;}
+    from {background-position-x:0;}
+    to {background-position-x:1219px;}
 }/* 구름 애니메이션 끝 */
