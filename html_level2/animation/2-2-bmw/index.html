@@ -9,7 +9,7 @@
     <style>
         #wrap {
             width:100%; /* height:100vh; */
-            background:url(images/bmw_bg.jpg);
+            background:url(images/bmw_bg.jpg) no-repeat 50% 100% / cover;
             position:relative;
         }
         header {
@@ -21,18 +21,24 @@
             border-bottom:1px solid rgba(255,255,255,0.2);
             width:80%; margin:0 auto; display:flex; justify-content:space-around;
         }
-        header nav a {padding:10px 0; position:relative;}
+        header nav a {padding:10px 0; position:relative; color:#fff;}
         header nav a::after {
             content:''; display:block;
             width:100%; height:1px; background:#cae4ff;
             position:absolute; bottom:-1px;
+            transform:scaleX(0);
+            transition:all 0.4s;
         }
-
+        header nav:hover a::after {transform:scaleX(1);}
         main {position:relative; width:1400px; height:80vh; margin:0 auto;}
         main img {
             position:absolute; left:0; bottom:100px;
+            animation: text_animation 2s;
         }
-
+        @keyframes text_animation {
+            from {opacity:0;}
+            to {opacity:1;}
+        }
     </style>
     <script>
         window.onload=function(){
